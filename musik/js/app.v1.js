@@ -5168,9 +5168,8 @@ Date.now = Date.now || function() {
                 clearTimeout($resize);
                 $resize = setTimeout(function() {
                     setHeight();
-                    mobile();
-                    //$window.width() < 768 && mobile();
-                    //$window.width() >= 768 && mobile('reset') && fixVbox();
+                    $window.width() < 768 && mobile();
+                    $window.width() >= 768 && mobile('reset') && fixVbox();
                     $width = $window.width();
                 }, 500);
             }
