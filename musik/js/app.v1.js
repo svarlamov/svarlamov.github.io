@@ -5161,9 +5161,11 @@ Date.now = Date.now || function() {
             $('[data-toggle^="shift"]').shift('init');
             return true;
         };
-        $window.width() < 768 && mobile();
+        mobile();
+        //$window.width() < 768 && mobile();
         var $resize, $width = $window.width();
         $window.resize(function() {
+            /*
             if ($width !== $window.width()) {
                 clearTimeout($resize);
                 $resize = setTimeout(function() {
@@ -5173,6 +5175,7 @@ Date.now = Date.now || function() {
                     $width = $window.width();
                 }, 500);
             }
+            */
         });
         var setHeight = function() {
             $('.app-fluid #nav > *').css('min-height', $(window).height() - 60);
